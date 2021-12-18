@@ -19,7 +19,7 @@ namez = input("c,  compress or e, extract? ")
 #@Author Jurijus pacalovas
 class compression:
        
-	def cryptograpy_compression4(self):
+        def cryptograpy_compression4(self):
                 
                 self.name = "Written: Jurijus pacalovas"
                 
@@ -29,9 +29,7 @@ class compression:
                     if namez=="e":
                         i=2
                     
-                    #import mpmath as m
-                    #m.mp.dps = 100000
-                    #PI=4 * m.atan(1)
+                 
 
                     spin=0
                     c=0
@@ -67,21 +65,7 @@ class compression:
                         	nac=len(nameas)
                         	
                         	C=2
-                        
-                        	
-                        	
-                  
-                        	
-                           
-                    
-                    
-                   
-                        
-              
-                    
-                    
-                              
-                     
+             
                     if i==1:
                         
                         nameas=name+".bin"
@@ -256,16 +240,7 @@ class compression:
                                     
                                     ei=0
                                    
-
-
-                                        
-                                    	   
-                                    	
-                                    	
-                                    
-                                    
-
-                                        	
+	
 
                                     g=0
 
@@ -318,11 +293,7 @@ class compression:
                                     		nameas=name+".b2" 
                                     		ccc=2
                                     	
-                                    
                                    
-                                   
-                                   
-                                  
                                     ei=0
                                     T14=0
                                     T21=0
@@ -458,7 +429,7 @@ class compression:
                                     	
                                     	T1=T7%2
                                     	if T1!=0:
-                                    		T7=T7-1
+                                    		T7=T7+1
                                     		T7=T7*2
                                     		
                                     	else:
@@ -534,20 +505,7 @@ class compression:
                                             			             					
                                             			sda17=szx+sda17
                                             																
-                                            		
-				
-				                                   
-				
-                                                                                      
-                                            	
-
-                                            
                                            
-                                           
-                                            	
-                                           
-                                           
-                                            
                                             
                                             L=len(sda17)
                                            
