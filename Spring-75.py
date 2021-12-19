@@ -300,12 +300,14 @@ class compression:
                                     T7 = int(sda3, 2)
                                     nameas=name+".b1" 
                                     ccc=1
-                                    	
-                                    T1=T7%2
                                     
-                                    if T1==0:
-                                    	T7=T7//2
+                                    T1=T7%2
+                                    T2=T7//2
+                                    T3=T2%2
+                                    if T1==0 and T3==0:
                                     	T7=T7-1
+                                    	T7=T7//2
+                                    		
                                     else:
                                     	T7=T7-1
                                     		
@@ -418,17 +420,19 @@ class compression:
                                    
 	                                    
                                    
-                                    if C==1:
+                                    if C==2:
                                     	T40 = int(sda3, 2)
                                     	
                                     	
-                                    if C==2:
+                                    if C==1:
                                     	T7 = int(sda3, 2)
                                     
                                     
                                     	
                                     	T1=T7%2
-                                    	if T1!=0:
+                                    	T2=T7*2
+                                    	T3=T2%2
+                                    	if T1==0 and T3==0:
                                     		T7=T7+1
                                     		T7=T7*2
                                     		
