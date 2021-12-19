@@ -305,8 +305,9 @@ class compression:
                                     T2=T7//2
                                     T3=T2%2
                                     if T1==0 and T3==0:
-                                    	T7=T7-1
+                                    	
                                     	T7=T7//2
+                                    	T7=T7-1
                                     		
                                     else:
                                     	T7=T7-1
@@ -430,11 +431,14 @@ class compression:
                                     
                                     	
                                     	T1=T7%2
-                                    	T2=T7*2
-                                    	T3=T2%2
-                                    	if T1==0 and T3==0:
+                                    	T2=T1+1
+                                    	T3=T2*2
+                                    	T4=T3%2
+                                    	
+                                    	if T1==0 and T4==0:
                                     		T7=T7+1
                                     		T7=T7*2
+                                    		
                                     		
                                     	else:
                                     		T7=T7+1
