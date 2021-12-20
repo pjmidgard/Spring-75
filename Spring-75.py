@@ -301,13 +301,17 @@ class compression:
                                     nameas=name+".b1" 
                                     ccc=1
                                     
-                                    T1=T7%2
-                                    T2=T7//2
-                                    T3=T2%2
-                                    if T1==0 and T3==0:
-                                    	
+                                    
+                            
+                                    T1=T7-1
+                                    T2=T1%2
+                                    T3=T2//2
+                                    T4=T3%2
+                                    
+                                    if T2==0 and T3==0:
+                                    	T7=T7-1	
                                     	T7=T7//2
-                                    	T7=T7-1
+                                    	
                                     		
                                     else:
                                     	T7=T7-1
@@ -427,17 +431,18 @@ class compression:
                                     	
                                     if C==1:
                                     	T7 = int(sda3, 2)
+                                    	
                                     
                                     
                                     	
                                     	T1=T7%2
-                                    	T2=T1+1
-                                    	T3=T2*2
+                                    	T3=T1*2
                                     	T4=T3%2
                                     	
                                     	if T1==0 and T4==0:
-                                    		T7=T7+1
+                                    		
                                     		T7=T7*2
+                                    		T7=T7+1	
                                     		
                                     		
                                     	else:
@@ -462,6 +467,9 @@ class compression:
                                     e4b=""
                                     block2=0
                                     sda5=""
+                                    
+                                    
+                                    sda17=bin(T7)[2:]
                                      
                                     sda2=sda17
                                    
