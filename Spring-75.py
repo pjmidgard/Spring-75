@@ -295,7 +295,8 @@ class compression:
                                     ei=0
                                     T14=0
                                     T21=0
-                                    sda3="1"+sda3
+                                    if   Circle_times2==0:
+                                    	sda3="1"+sda3
                                     T7 = int(sda3, 2)
                                     nameas=name+".b1" 
                                     ccc=1
