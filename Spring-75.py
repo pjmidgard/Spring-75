@@ -428,7 +428,9 @@ class compression:
 	                                    
                                    
                                     if C==2:
-                                    	T40 = int(sda3, 2)
+                                    	if   Circle_times2==0:
+                               	
+                                    		T40 = int(sda3, 2)
                                     	
                                     	
                                     if C==1:
