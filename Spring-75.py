@@ -289,14 +289,13 @@ class compression:
                                     Spin=0
                                     if   Circle_times2==0:
                                     	T40 = int(sda3, 2)
-                                    	if sda3=="00000000" or T40<=2**24:
-                                    		nameas=name+".b2" 
-                                    		ccc=2
+                                    
                                     	
                                    
                                     ei=0
                                     T14=0
                                     T21=0
+                                    sda3="1"+sda3
                                     T7 = int(sda3, 2)
                                     nameas=name+".b1" 
                                     ccc=1
@@ -492,7 +491,7 @@ class compression:
                                           
                                          
                                             if C==1:
-                                            	sda17=bin(T7)[2:]
+                                            	sda17=bin(T7)[3:]
                                             	lenf=len(sda17)
                                             	szx=""
                                             	xc=8-lenf%8
