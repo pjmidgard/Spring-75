@@ -297,6 +297,7 @@ class compression:
                                     T21=0
                                     if   Circle_times2==0:
                                     	sda3="1"+sda3
+                                    	
                                     T7 = int(sda3, 2)
                                     nameas=name+".b1" 
                                     ccc=1
@@ -332,25 +333,26 @@ class compression:
                                     if ccc==2:
                                         	sda17=bin(T40)[2:]	
                                         	
-                                    lenf=len(sda17)
-                                    szx=""
-                                    xc=8-lenf%8
-                                    z=0
-                                    if xc!=0:
-                                                 if xc!=8:
-                                                         while z<xc:
-                                                         	szx="0"+szx
-                                                         	z=z+1
-	
-                                  
-                                    lenf=len(sda17)
-                                    B3=""
-                                    sda17=szx+sda17
+                                    
                                     sda2=sda17
                                     Circle_times2=Circle_times2+1
                                     
                                     
                                     if   Circle_times2==65535:
+                                    		lenf=len(sda17)
+                                    		szx=""
+                                    		xc=8-lenf%8
+                                    		z=0
+                                    		if xc!=0:
+                                                 	if xc!=8:
+                                                         	while z<xc:
+                                                         		szx="0"+szx
+                                                         		z=z+1
+	
+                                  
+                                    		lenf=len(sda17)
+                                    		B3=""
+                                    		sda17=szx+sda17
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
                                     		qqwslenf=len(sda17)
