@@ -300,6 +300,7 @@ class compression:
                                     e=2**(24-1)
                                     g=0
                                     f=0
+                                    T6=0
                                     while f!=1:
                                         T1=T7%e
                                         if T1==0:
