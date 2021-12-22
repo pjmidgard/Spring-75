@@ -334,7 +334,7 @@ class compression:
                                     		nameas=name+".b2" 
                                     if ccc==1:
                                     		sda18=bin(g)[2:]
-                                    		if   Circle_times2==65535:
+                                    		if   Circle_times2==1000:
                                     			h=24
                                     		else:
                                     			h=23
@@ -353,7 +353,7 @@ class compression:
                                                          			z=z+1
                                     if ccc==1:
                                     	 	sda17=bin(T7)[2:]
-                                    	 	if   Circle_times2!=65535:
+                                    	 	if   Circle_times2!=1000:
                                     	 		sda17=sda18+sda17
                                     if ccc==2:
                                         	sda17=bin(T40)[2:]	
@@ -361,7 +361,7 @@ class compression:
                                     
                                     sda2=sda17
                                     Circle_times2=Circle_times2+1
-                                    if   Circle_times2==65535:
+                                    if   Circle_times2==1000:
 
                                                 lenf=len(sda17)
                                                 szx=""
@@ -374,7 +374,7 @@ class compression:
                                                                         z=z+1
                                     
                                     
-                                    if   Circle_times2==65535:
+                                    if   Circle_times2==1000:
                                     		
 	
                                   
@@ -515,7 +515,7 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        if  Circle_times2==65535:
+                                        if  Circle_times2==1000:
                                         	
                                           
                                           
