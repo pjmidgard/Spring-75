@@ -295,28 +295,33 @@ class compression:
                                     ei=0
                                     T14=0
                                     T21=0
+                                    
                                     if   Circle_times2==0:
                                     	sda3="1"+sda3
-                                    	
                                     T7 = int(sda3, 2)
                                     nameas=name+".b1" 
                                     ccc=1
                                     
-                                    
-                            
-                                    T1=T7-1
-                                    T2=T1%2
-                                    T3=T2//2
-                                    T4=T3%2
-                                    
-                                    if T2==0 and T3==0:
-                                    	T7=T7-1	
-                                    	T7=T7//2
+                                    e=2**(24-1)
+                                    g=0
+                                    f=0
+                                    while f!=1:
+                                    	T1=T7%e
+                                    	if T1==0:
+                                    		T7=T7//e
+                                    		f=1
+                                    		
                                     	
+                                    	else:
+                                    		e=e-1
+                                    		g=g+1
                                     		
-                                    else:
-                                    	T7=T7-1
                                     		
+                                    		
+                                    
+                                    if g>2**(23-1):
+                                    	ccc=2
+                                    				
                                     		
                                     if T7<=0:
                                     	ccc=2
@@ -327,9 +332,29 @@ class compression:
                                     		nameas=name+".b1" 
                                     if ccc==2:
                                     		nameas=name+".b2" 
+                                    if ccc==1:
+                                    		sda18=bin(g)[2:]
+                                    		if   Circle_times2==65535:
+                                    			h=24
+                                    		else:
+                                    			h=23
                                     		
                                     if ccc==1:
-                                        	sda17=bin(T7)[2:]
+                                        	
+                                        	
+                                            lenf=len(sda18)
+                                            szx=""
+                                            xc=h-lenf%h
+                                            z=0
+                                            if xc!=0:
+                                                         	if xc!=h:
+                                                         		while z<xc:
+                                                         			szx="0"+szx
+                                                         			z=z+1
+                                    if ccc==1:
+                                    	 	sda17=bin(T7)[2:]
+                                    	 	if   Circle_times2!=65535:
+                                    	 		sda17=sda18+sda17
                                     if ccc==2:
                                         	sda17=bin(T40)[2:]	
                                         	
@@ -352,7 +377,7 @@ class compression:
                                   
                                     		lenf=len(sda17)
                                     		B3=""
-                                    		sda17=szx+sda17
+                                    		sda17=sda18+szx+sda17
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
                                     		qqwslenf=len(sda17)
@@ -434,24 +459,21 @@ class compression:
                                     	
                                     	
                                     if C==1:
-                                    	T7 = int(sda3, 2)
-                                    	
-                                    
-                                    
-                                    	
-                                    	T1=T7%2
-                                    	T3=T1*2
-                                    	T4=T3%2
-                                    	
-                                    	if T1==0 and T4==0:
-                                    		
-                                    		T7=T7*2
-                                    		T7=T7+1	
-                                    		
-                                    		
+                                    	if   Circle_times2==0:
+                                    		sda4=sda3[0:24]
+                                    		sda3=sda3[24:]
                                     	else:
-                                    		T7=T7+1
-                                    
+                                    		sda4=sda3[0:23]
+                                    		sda3=sda3[23:]
+                                    		
+                                    	
+                                    	T7 = int(sda3, 2)
+                                    	T8 = int(sda4, 2)
+                                    	e=2**(24-1)
+                                    	j=e-T8
+                                    	T7=T7*j
+                                    	
+                        
                                     		
                                     	
 	                       
