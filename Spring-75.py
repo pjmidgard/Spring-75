@@ -318,7 +318,9 @@ class compression:
                                     		
                                     		
                                     		
-                                    
+                                    R=0
+                                    E=2**(24-1)
+                                    R=E-g
                                     if g>2**(23-1):
                                     	ccc=2
                                     				
@@ -334,8 +336,8 @@ class compression:
                                     		nameas=name+".b2" 
                                     if ccc==1:
                                     		sda18=bin(g)[2:]
-                                    		if   Circle_times2==1000:
-                                    			h=24
+                                    		if   Circle_times2==65535:
+                                    			h=23
                                     		else:
                                     			h=23
                                     		
@@ -343,25 +345,25 @@ class compression:
                                         	
                                         	
                                             lenf=len(sda18)
-                                            szx=""
+                                            szx2=""
                                             xc=h-lenf%h
                                             z=0
                                             if xc!=0:
                                                          	if xc!=h:
                                                          		while z<xc:
-                                                         			szx="0"+szx
+                                                         			szx2="0"+szx2
                                                          			z=z+1
                                     if ccc==1:
                                     	 	sda17=bin(T7)[2:]
-                                    	 	if   Circle_times2!=1000:
-                                    	 		sda17=sda18+sda17
+                                    	 	if   Circle_times2==1-2:
+                                    	 		sda17=szx2+sda18+sda17
                                     if ccc==2:
                                         	sda17=bin(T40)[2:]	
                                         	
                                     
                                     sda2=sda17
                                     Circle_times2=Circle_times2+1
-                                    if   Circle_times2==1000:
+                                    if   Circle_times2==65535:
 
                                                 lenf=len(sda17)
                                                 szx=""
@@ -374,13 +376,13 @@ class compression:
                                                                         z=z+1
                                     
                                     
-                                    if   Circle_times2==1000:
+                                    if   Circle_times2==65535:
                                     		
 	
                                   
                                     		lenf=len(sda17)
                                     		B3=""
-                                    		sda17=sda18+szx+sda17
+                                    		sda17="1"+szx2+sda18+szx+sda17
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
                                     		qqwslenf=len(sda17)
@@ -463,7 +465,7 @@ class compression:
                                     	
                                     if C==1:
                                     	if   Circle_times2==0:
-                                    		sda4=sda3[0:24]
+                                    		sda4=sda3[1:24]
                                     		sda3=sda3[24:]
                                     	else:
                                     		sda4=sda3[0:23]
@@ -515,7 +517,7 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        if  Circle_times2==1000:
+                                        if  Circle_times2==65535:
                                         	
                                           
                                           
