@@ -5,7 +5,7 @@ Spring-75
 
 Compression Map:
 
-Division
+Division:
 
 Division minus 1 this number write bit less and multyply by this number back. If prime number -1 and divide. Repeat this many times.
 
