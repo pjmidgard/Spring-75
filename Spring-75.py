@@ -361,18 +361,21 @@ class compression:
                                     
                                     sda2=sda17
                                     Circle_times2=Circle_times2+1
+                                    if   Circle_times2==65535:
+
+                                                lenf=len(sda17)
+                                                szx=""
+                                                xc=8-lenf%8
+                                                z=0
+                                                if xc!=0:
+                                                        if xc!=8:
+                                                                while z<xc:
+                                                                        szx="0"+szx
+                                                                        z=z+1
                                     
                                     
                                     if   Circle_times2==65535:
-                                    		lenf=len(sda17)
-                                    		szx=""
-                                    		xc=8-lenf%8
-                                    		z=0
-                                    		if xc!=0:
-                                                 	if xc!=8:
-                                                         	while z<xc:
-                                                         		szx="0"+szx
-                                                         		z=z+1
+                                    		
 	
                                   
                                     		lenf=len(sda17)
