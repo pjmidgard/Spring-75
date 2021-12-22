@@ -5,4 +5,5 @@ Speed
 
 @Author Jurijus Pacalovas
 
-Division by numbers minus this number write bit less and multyply by this number back. Repeat this many times.
+Division minus 1 this number write bit less and multyply by this number back. If prime number -1 and divide. Repeat this many times.
+
