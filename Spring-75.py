@@ -370,7 +370,7 @@ class compression:
                                                          			z=z+1
                                     if ccc==1:
                                     	 	sda17=bin(T6)[2:]
-                                    	 	if   Circle_times2==65535-2:
+                                    	 	if   Circle_times2<=65535-2:
                                     	 		sda17=bit+szx2+sda18+sda17
                                     if ccc==2:
                                         	sda17=bin(T40)[2:]	
