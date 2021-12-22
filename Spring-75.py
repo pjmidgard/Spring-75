@@ -353,7 +353,7 @@ class compression:
                                     		if   Circle_times2==65535:
                                     			h=19
                                     		else:
-                                    			h=19
+                                    			h=22
                                     		
                                     if ccc==1:
                                         	
@@ -396,7 +396,7 @@ class compression:
                                   
                                     		lenf=len(sda17)
                                     		B3=""
-                                    		sda17="1"+szx2+sda18+szx+sda17
+                                    		sda17="1"+bit+szx2+sda18+szx+sda17
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
                                     		qqwslenf=len(sda17)
@@ -480,8 +480,8 @@ class compression:
                                         else:
                                                 sda5=sda3[0:1]
                                         if   Circle_times2==0:
-                                                sda4=sda3[2:21]
-                                                sda3=sda3[21:]
+                                                sda4=sda3[2:24]
+                                                sda3=sda3[24:]
                                         else:
                                                 sda4=sda3[1:20]
                                                 sda3=sda3[20:]
