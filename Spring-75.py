@@ -373,13 +373,13 @@ class compression:
                                         	sda17=bin(T40)[2:]	
                                         	
                                     
-                                    if ccc==2:
-                                            print(ccc)
-                                    print(g)
+                                    #if ccc==2:
+                                            #print(ccc)
+                                    #print(g)
                                             
                                     Circle_times2=Circle_times2+1
                                     lenfT=len(sda3)
-                                    print(lenfT)
+                                    #print(lenfT)
                                     if   lenfT>8192:
                                             sda17=sda17+szx2+sda18+bits
                                    
