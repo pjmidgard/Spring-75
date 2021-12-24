@@ -320,22 +320,23 @@ class compression:
 
                                         else:
                                                 T7=T7-4
+                                                if g==0:
+                                                	T7=T7-((2**22)-1)
+                                                
 
                                                 g=g+1
                                                 
                                                 
 
-                                        if g>(2**24)-1:
+                                        if g>(2**22)-1:
                                                 
                                                 f=1
+                                                ccc=2
                                                 
                                                 
                                          
                                   
-                                    g=g-(2**22)
-                                    if g>(2**22)-1 or g<=0:
-                                                
-                                        ccc=2
+                                    
                                     		
                                     if T6<=1:
                                     	ccc=2
@@ -372,13 +373,13 @@ class compression:
                                         	sda17=bin(T40)[2:]	
                                         	
                                     
-                                    #if ccc==2:
-                                            #print(ccc)
-                                    #print(g)
+                                    if ccc==2:
+                                            print(ccc)
+                                    print(g)
                                             
                                     Circle_times2=Circle_times2+1
                                     lenfT=len(sda3)
-                                    #print(lenfT)
+                                    print(lenfT)
                                     if   lenfT>8192:
                                             sda17=sda17+szx2+sda18+bits
                                    
@@ -533,7 +534,8 @@ class compression:
                                                 j=e-1426428
 
                                         T7=T7*j
-                                        T7=T7+(T9*4)+((2**22)*4)
+                                        if T9>0:
+                                        	T7=T7+(T9*4)+((2**22)-1)
                                
                                     sda6=sda4
                                     sda4=""
