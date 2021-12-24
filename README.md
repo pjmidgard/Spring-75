@@ -7,5 +7,5 @@ Compression Map:
 
 Division:
 
-Division minus 1 this number write bit less and multyply by this number back. If prime number -4 and divide. Repeat this many times.
+Division write bit less and multyply by this number back. If prime number -4 and divide. Repeat this many times.
 
