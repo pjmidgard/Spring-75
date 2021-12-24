@@ -372,11 +372,15 @@ class compression:
                                             
                                     Circle_times2=Circle_times2+1
                                     lenfT=len(sda3)
-                                    if   lenfT>80:
+                                    print(lenfT)
+                                    if   lenfT>8192:
                                             sda17=sda17+szx2+sda18+bits
                                    
                                     sda2=sda17
-                                    if   lenfT<=80:
+
+                                    		
+                                 
+                                    if   lenfT<=8192:
                                     	        
                                                   
                                                 lenf=len(sda17)
@@ -389,7 +393,7 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
                                     
-                                    if   lenfT<=80:
+                                    if   lenfT<=8192:
                                     	        
                                                 sda19=bin(Circle_times2)[2:]
                                                 lenf=len(sda19)
@@ -402,24 +406,27 @@ class compression:
                                                                         szx3="0"+szx3
                                                                         z=z+1         
                                     
-                                    if   lenfT<=80:
+                                    if   lenfT<=8192 or ccc==2:
                                     		
 	
                                                 
                                                 
                                     		lenf=len(sda17)
                                     		B3=""
+                                    		if ccc==2:
+                                    		
+                                    			sda17=szx+sda17
+                                    		
                                     		if ccc==1:
                                     		
-                                    			sda17=szx3=sda19+"1"+szx+sda17+szx2+sda18+bits
+                                    			sda17=szx3+sda19+"1"+szx+sda17+szx2+sda18+bits
+
+                                    		
                                     			
                                     			
                                     
                                                         
-                                    		
-                                    		if ccc==2:
-                                    		
-                                    			sda17=szx+sda17
+                                    
                                     		
 
                                     		
