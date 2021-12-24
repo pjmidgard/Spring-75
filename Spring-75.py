@@ -322,6 +322,7 @@ class compression:
                                                 T7=T7-4
                                                 g=g+1
                                                 
+                                                
 
                                         if g>(2**22)-1:
                                                 
@@ -330,7 +331,7 @@ class compression:
                                          
                                   
                                   
-		
+		        
                                     		
                                     if T6<=1:
                                     	ccc=2
@@ -369,6 +370,7 @@ class compression:
                                     
                                     if ccc==2:
                                             print(ccc)
+                                    print(g)
                                             
                                     Circle_times2=Circle_times2+1
                                     lenfT=len(sda3)
@@ -421,20 +423,6 @@ class compression:
                                     		
                                     			sda17=szx3+sda19+"1"+szx+sda17+szx2+sda18+bits
 
-                                    		
-                                    			
-                                    			
-                                    
-                                                        
-                                    
-                                    		
-
-                                    		
-                                                        
-                                            
-                                                         			
-                                                        
-                                    			
                                     		
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
