@@ -322,7 +322,7 @@ class compression:
                                                 g=g+1
                                                 
 
-                                        if g>2**(22-1):
+                                        if g>(2**22)-1:
                                                 
                                                 f=1
                                                 ccc=2
