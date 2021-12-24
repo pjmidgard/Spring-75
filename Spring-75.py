@@ -371,7 +371,7 @@ class compression:
                                             
                                     Circle_times2=Circle_times2+1
                                     if   Circle_times2<=65534:
-                                            sda17=szx+sda17+szx2+sda18+bits
+                                            sda17=sda17+szx2+sda18+bits
                                    
                                     sda2=sda17
                                     if   Circle_times2==65535:
