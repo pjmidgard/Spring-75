@@ -348,7 +348,7 @@ class compression:
                                     	ccc=2
                                     	
                                     g=g-1138595
-                                    if g<0:
+                                    if g<0 or g>(2**6)-1:
                                             ccc=2
                                     
                                     
