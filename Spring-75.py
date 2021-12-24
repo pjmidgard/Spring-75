@@ -370,13 +370,14 @@ class compression:
                                             print(ccc)
                                             
                                     Circle_times2=Circle_times2+1
-                                    if   Circle_times2<=65534:
+                                    lenfT=len(sda3)
+                                    if   lenfT>80:
                                             sda17=sda17+szx2+sda18+bits
                                    
                                     sda2=sda17
-                                    if   Circle_times2==65535:
+                                    if   lenfT<=80:
                                     	        
-
+                                                  
                                                 lenf=len(sda17)
                                                 szx=""
                                                 xc=8-lenf%8
@@ -387,8 +388,20 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
                                     
+                                    if   lenfT<=80:
+                                    	        
+                                                sda19=bin(Circle_times2)[2:]
+                                                lenf=len(sda19)
+                                                szx3=""
+                                                xc=48-lenf%48
+                                                z=0
+                                                if xc!=0:
+                                                        if xc!=8:
+                                                                while z<xc:
+                                                                        szx3="0"+szx3
+                                                                        z=z+1         
                                     
-                                    if   Circle_times2==65535:
+                                    if   lenfT<=80:
                                     		
 	
                                                 
@@ -397,11 +410,22 @@ class compression:
                                     		B3=""
                                     		if ccc==1:
                                     		
-                                    			sda17="1"+szx+sda17+szx2+sda18+bits
+                                    			sda17=szx3=sda19+"1"+szx+sda17+szx2+sda18+bits
+                                    			
+                                    			
+                                    
+                                                        
                                     		
                                     		if ccc==2:
                                     		
                                     			sda17=szx+sda17
+                                    		
+
+                                    		
+                                                        
+                                            
+                                                         			
+                                                        
                                     			
                                     		
                                     		L=len(sda17)
@@ -456,6 +480,8 @@ class compression:
                                     sda13=""
                                     sda4=""
                                     sda5=""
+                                    sda6=""
+                                    sda7=""
 
                                     ei=0
  
@@ -484,6 +510,9 @@ class compression:
                                     	
                                     if C==1:
                                         if   Circle_times2==0:
+                                                sda7=sda3[0:48]
+                                                T = int(sda7, 2)
+                                                sda3=sda3[48:]
                                                 sda3=sda3[1:]
                                             
                                 
@@ -540,7 +569,7 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        if  Circle_times2==65535:
+                                        if  Circle_times2==T:
                                         
                                             if C==1:
                                             	sda17=bin(T7)[3:]
