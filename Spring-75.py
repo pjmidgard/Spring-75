@@ -291,7 +291,7 @@ class compression:
                                     ei=0
                                     T14=0
                                     T21=0
-                                    
+                                   
                                     if   Circle_times2==0:
                                     	sda3="1"+sda3
                                     T7 = int(sda3, 2)
@@ -303,58 +303,38 @@ class compression:
                                     f=0
                                     T6=0
                                     while f!=1:
-                                        T1=T7%e
+                                        T1=T7%(e-1138595)
+                                        T2=T7%(e-1426428)
                                         if T1==0:
                                                 T6=T7//e
                                                 f=1
-                                                bit="0"
-                                                        
-                                                
-                                        else:
-                                                e=e-1
-                                                g=g+1
+                                                bits="0"
 
-                                        if g>2**(22-1) or e<=10:
+
+                                        
+                                        elif T2==0:
+                                                T6=T7//e
+                                                f=1
+                                                bits="1"
+
+                                        else:
+                                                T7=T7-4
+                                                g=g+1
+                                                
+
+                                        if g>2**(22-1):
                                                 
                                                 f=1
+                                                ccc=2
                                          
                                   
-                                    if g>2**(22-1) or e<=10:
-                                            T7=T7-1
-                                            e=(2**24)-1
-                                            g=0
-                                            f=0
-                                            while f!=1:
-                                                T1=T7%e
-                                                if T1==0:
-                                                        T6=T7//e
-                                                        f=1
-                                                        bit="1"
-                                                        
-                                                
-                                                else:
-                                                        e=e-1
-                                                        g=g+1
-                                                   
-
-                                                if g>2**(22-1) or e<=10:
-                                                        print(g)
-                                                        print(2**(22-1))
-                                                        ccc=2
-                                                        f=1
+                                  
 		
                                     		
                                     if T6<=1:
                                     	ccc=2
                                     	
-                                    g=g-1138595
-                                    if g<0 or g>(2**6)-1:
-                                            ccc=2
-                                    
-                                    
-                                    
-                                    
-                                    
+                                  
                                  
                                     if ccc==1:
                                     		nameas=name+".b1" 
@@ -362,7 +342,7 @@ class compression:
                                     		nameas=name+".b2" 
                                     if ccc==1:
                                     		sda18=bin(g)[2:]
-                                    		h=6
+                                    		h=22
                                     
                                     		
                                     if ccc==1:
@@ -386,11 +366,15 @@ class compression:
                                         	sda17=bin(T40)[2:]	
                                         	
                                     
-                                    sda2=sda17
+                                    if ccc==2:
+                                            print(ccc)
+                                            
                                     Circle_times2=Circle_times2+1
+                                    if   Circle_times2<=65534:
+                                            sda17=szx+sda17+szx2+sda18+bits
                                    
-                                    
-                                    if   Circle_times2==1:
+                                    sda2=sda17
+                                    if   Circle_times2==65535:
                                     	        
 
                                                 lenf=len(sda17)
@@ -404,7 +388,7 @@ class compression:
                                                                         z=z+1
                                     
                                     
-                                    if   Circle_times2==1:
+                                    if   Circle_times2==65535:
                                     		
 	
                                                 
@@ -413,8 +397,8 @@ class compression:
                                     		B3=""
                                     		if ccc==1:
                                     		
-                                    			sda17="1"+bit+szx2+sda18+szx+sda17
-                                    		print(ccc)
+                                    			sda17="1"+szx+sda17+szx2+sda18+bits
+                                    		
                                     		if ccc==2:
                                     		
                                     			sda17=szx+sda17
@@ -500,27 +484,27 @@ class compression:
                                     	
                                     if C==1:
                                         if   Circle_times2==0:
-                                                sda5=sda3[1:2]
-                                        if   Circle_times2==0:
-                                                sda4=sda3[2:8]
-                                                sda3=sda3[8:]
-                                        
+                                                sda3=sda3[1:]
+                                            
+                                
+                                        sda4=sda3[lenf6-1:lenf6]
+                                        sda6=sda3[lenf6-23:lenf6-1]
+                                        sda3=sda3[0:lenf6-23]
 
-                                       
-                                        if sda5=="1":
-                                                T7 = int(sda3, 2)
-                                                T8 = int(sda4, 2)
-                                                e=(2**24)-1
-                                               
-                                                j=e-T8-1138595
-                                                T7=T7*j
-                                                T7=T7+1
-                                        if sda5=="0":
-                                                T7 = int(sda3, 2)
-                                                T8 = int(sda4, 2)
-                                                e=(2**24)-1
-                                                j=e-T8-1138595
-                                                T7=T7*j
+                                        
+                                     
+                                        T9 = int(sda6, 2)
+                                        T7 = int(sda3, 2)
+                                        T8 = int(sda4, 2)
+                                        e=(2**24)-1
+                                        if T8=="0":
+                                                j=e-1138595
+
+                                        if T8=="1":
+                                                j=e-1426428
+
+                                        T7=T7*j
+                                        T7=T7+(T9*4)
                                
                                     sda6=sda4
                                     sda4=""
@@ -556,7 +540,7 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        if  Circle_times2==1:
+                                        if  Circle_times2==65535:
                                         
                                             if C==1:
                                             	sda17=bin(T7)[3:]
