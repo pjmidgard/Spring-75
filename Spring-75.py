@@ -320,6 +320,7 @@ class compression:
 
                                         else:
                                                 T7=T7-4
+
                                                 g=g+1
                                                 
                                                 
