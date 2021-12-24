@@ -302,6 +302,7 @@ class compression:
                                     g=0
                                     f=0
                                     T6=0
+                                    bits=""
                                     while f!=1:
                                         T1=T7%(e-1138595)
                                         T2=T7%(e-1426428)
