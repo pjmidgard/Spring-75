@@ -324,17 +324,15 @@ class compression:
                                                 
                                                 
 
-                                        if g>(2**24)-1:
+                                        if g>(2**22)-1:
                                                 
                                                 f=1
                                                 
                                                 
                                          
                                   
-                                    g=g-(2**22)
-                                    if g>(2**22)-1 or g<=0:
-                                                
-                                        ccc=2
+                                   
+                                    
                                     		
                                     if T6<=1:
                                     	ccc=2
@@ -532,7 +530,7 @@ class compression:
                                                 j=e-1426428
 
                                         T7=T7*j
-                                        T7=T7+(T9*4)+((2**22)*4)
+                                        T7=T7+(T9*4)
                                
                                     sda6=sda4
                                     sda4=""
