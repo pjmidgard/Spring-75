@@ -342,7 +342,16 @@ class compression:
                                     if ccc==1:
                                     		nameas=name+".b1" 
                                     if ccc==2:
-                                    		nameas=name+".b2" 
+                                                if Circle_times2==0:
+                                                        nameas=name+".b2"
+
+                                                if Circle_times2!=0:
+                                                        nameas=name+".b1"
+                                                        sda17=sda3
+                                                        Circle_times2=Circle_times2-1
+                                                        ccc=3
+                                                        
+                                                        
                                     if ccc==1:
                                     		sda18=bin(g)[2:]
                                     		h=22
@@ -416,6 +425,10 @@ class compression:
                                                 
                                     		lenf=len(sda17)
                                     		B3=""
+
+                                    		if ccc==3:
+                                    		
+                                    			sda17=szx3+sda19+"1"+szx+sda17
                                     		if ccc==2:
                                     		
                                     			sda17=szx+sda17
@@ -424,6 +437,9 @@ class compression:
                                     		
                                     			sda17=szx3+sda19+"1"+szx+sda17+szx2+sda18+bits
 
+
+                                    	
+                                    		
                                     		
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
