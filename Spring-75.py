@@ -392,18 +392,18 @@ class compression:
 
                                     		
                                  
-                                    if   lenfT<=8192:
+                                    
                                     	        
                                                   
-                                                lenf=len(sda17)
-                                                szx=""
-                                                xc=8-lenf%8
-                                                z=0
-                                                if xc!=0:
-                                                        if xc!=8:
-                                                                while z<xc:
-                                                                        szx="0"+szx
-                                                                        z=z+1
+                                    lenf=len(sda17)
+                                    szx=""
+                                    xc=8-lenf%8
+                                    z=0
+                                    if xc!=0:
+                                            if xc!=8:
+                                                while z<xc:
+                                                        szx="0"+szx
+                                                        z=z+1
                                     
                                     if   lenfT<=8192:
                                     	        
