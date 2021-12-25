@@ -303,40 +303,38 @@ class compression:
                                     f=0
                                     T6=0
                                     bits=""
-                                    while f!=1:
+                                    while f!=1:    
                                         T1=T7%(e-1138595)
                                         T2=T7%(e-1426428)
                                         if T1==0:
-                                                T6=T7//e
+                                                T6=T7//(e-1138595)
                                                 f=1
                                                 bits="0"
 
 
                                         
                                         elif T2==0:
-                                                T6=T7//e
+                                                T6=T7//(e-1426428)
                                                 f=1
                                                 bits="1"
 
                                         else:
                                                 T7=T7-4
-                                                if g==0:
-                                                	T7=T7-((2**22)-1)
-                                                
-
                                                 g=g+1
                                                 
                                                 
 
-                                        if g>(2**22)-1:
+                                        if g>(2**24)-1:
                                                 
                                                 f=1
-                                                ccc=2
                                                 
                                                 
                                          
                                   
-                                    
+                                    g=g-(2**22)
+                                    if g>(2**22)-1 or g<=0:
+                                                
+                                        ccc=2
                                     		
                                     if T6<=1:
                                     	ccc=2
@@ -534,8 +532,7 @@ class compression:
                                                 j=e-1426428
 
                                         T7=T7*j
-                                        if T9>0:
-                                        	T7=T7+(T9*4)+((2**22)-1)
+                                        T7=T7+(T9*4)+((2**22)*4)
                                
                                     sda6=sda4
                                     sda4=""
